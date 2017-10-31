@@ -1,0 +1,18 @@
+{
+  "name": "MiWayInsurance/vehicle-provider",
+  "description": "3rd party vehicle provider for fzaninotto/Faker",
+  "keywords": [
+    "faker",
+    "vehicle",
+    "provider"
+  ],
+  "license": "MIT",
+  "require": {
+    "fzaninotto/faker": "~1"
+  },
+  "autoload": {
+    "psr-4": {
+      "MiWay\\Faker\\": "."
+    }
+  }
+}
