@@ -1,5 +1,5 @@
 {
-  "name": "MiWayInsurance/vehicle-provider",
+  "name": "miway/vehicle-provider",
   "description": "3rd party vehicle provider for fzaninotto/Faker",
   "keywords": [
     "faker",
