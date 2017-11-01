@@ -35,6 +35,7 @@ class VehicleProvider extends Base
     {
         $make = static::randomElement(static::$make);
         $model = static::randomElement(static::$model[$make]);
+
         return sprintf(static::$makeModelFormat, $make, $model);
     }
 }
