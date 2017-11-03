@@ -12,7 +12,8 @@
   },
   "autoload": {
     "psr-4": {
-      "MiWay\\Faker\\": "."
+      "MiWay\\Faker\\": ".",
+      "Faker\\Provider\\": "Provider"
     }
   }
 }

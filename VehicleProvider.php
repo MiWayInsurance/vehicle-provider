@@ -12,11 +12,10 @@ use Faker\Provider\Base;
 
 class VehicleProvider extends Base
 {
-    protected static $make = array('BMW', 'Ford', 'Mazda', 'Mercedes-Benz', 'Suzuki', 'Toyota', 'Volkswagen', 'Volvo');
-
     protected static $model = array(
         'BMW' => array('120d', '220i', '320d', '520i', 'X3', 'x5'),
         'Ford' => array('Fiesta', 'Focus'),
+        'Honda' => array('Civic', 'CR-V'),
         'Mazda' => array('2', '3'),
         'Mercedes-Benz' => array('A160', 'C200', 'E350', 'ML350', 'S500'),
         'Suzuki' => array('Swift'),
@@ -33,9 +32,17 @@ class VehicleProvider extends Base
      */
     public function makeModel()
     {
-        $make = static::randomElement(static::$make);
+        $make = static::randomKey(static::$model);
         $model = static::randomElement(static::$model[$make]);
 
         return sprintf(static::$makeModelFormat, $make, $model);
+    }
+
+    /**
+     * @return string
+     */
+    public function licencePlate()
+    {
+        return strtoupper(static::lexify('??????'));
     }
 }
